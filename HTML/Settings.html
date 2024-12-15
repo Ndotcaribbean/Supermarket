@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walker Supermarket - Settings</title>
+    <link rel="stylesheet" href="../CSS/Settings.css">
+    <script src="/js/Settings.js" defer></script>
+    <style>
+        .theme-options {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .theme-option {
+            cursor: pointer;
+            padding: 10px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+        }
+        .theme-option.selected {
+            border-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="settings-container">
+        <h1>Account Settings</h1>
+        <div class="settings-section">
+            <h2>Theme Preferences</h2>
+            <div class="theme-options">
+                <div class="theme-option light" data-theme="light">
+                    <h3>Light Theme</h3>
+                    <p>Bright and clean interface</p>
+                </div>
+                <div class="theme-option dark" data-theme="dark">
+                    <h3>Dark Theme</h3>
+                    <p>Easy on the eyes, great for low light</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <h2>Account Details</h2>
+            <div id="user-profile">
+                <p id="user-name">Name: </p>
+                <p id="user-email">Email: </p>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <h2>Privacy & Security</h2>
+            <button id="change-password">Change Password</button>
+            <button id="logout">Logout</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeOptions = document.querySelectorAll('.theme-option');
+            const logoutButton = document.getElementById('logout');
+            const userProfile = document.getElementById('user-profile');
+
+            // Load current user details
+            if (userManager.currentUser) {
+                document.getElementById('user-name').textContent += userManager.currentUser.fullname;
+                document.getElementById('user-email').textContent += userManager.currentUser.email;
+            }
+
+            // Theme selection
+            themeOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    themeOptions.forEach(opt => opt.classList.remove('selected'));
+                    option.classList.add('selected');
+                    
+                    const theme = option.dataset.theme;
+                    userManager.changeTheme(theme);
+                });
+            });
+
+            // Logout functionality
+            if (logoutButton) {
+                logoutButton.addEventListener('click', () => {
+                    userManager.logout();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

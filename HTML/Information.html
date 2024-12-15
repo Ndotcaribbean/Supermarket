@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Walker Community Supermarket</title>
+    <link rel="stylesheet" href="../CSS/Information.css">
+    <link rel="stylesheet" href="../CSS/Information.js">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css"/>
+</head>
+<body class="bg-gray-100">
+    <header>
+        <div class="navbar">
+          
+            <span>
+              <p>Walker Community Supermarket</p>
+            </span>
+          
+          <nav>
+            <ul>
+                <li><a href="Supermarket.html">Home</a></a></li>
+                <li><a href="Information.html">Information</a></li>
+                <li><a href="Contact.html">Contact</a></a></li>
+                <div class="account-profile">
+                    <div class="dropdown">
+                        <div class="user-icon">
+                            <img src="" alt="User Profile">
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="#">My Profile</a>
+                            <a href="#">Orders</a>
+                            <a href="#">Settings</a>
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
+            </ul>
+          </nav>
+          
+        </div>
+        </div>
+
+        <div class="logo">
+          <img src="../Img/large-removebg-preview.png" alt="Walker Community Supermarket Logo"> 
+        
+        <div class="search">
+            <input type="text" placeholder="Search Product...">
+            <button>Search</button>
+      </div>
+    </header>
+    
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-10">
+            <h2 class="text-3xl font-semibold mb-4">About Us</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <p>Walker Community Supermarket is a community-focused supermarket committed to providing high-quality, fresh products at affordable prices. Established in 2024, we pride ourselves on supporting local farmers and offering a diverse range of groceries.</p>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-3xl font-semibold mb-4">Store Information</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Hours of Operation</h3>
+                    <ul>
+                        <li>Monday-Saturday: 7:00 AM - 10:00 PM</li>
+                        <li>Sunday: 8:00 AM - 9:00 PM</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Services</h3>
+                    <ul>
+                        <li>Online Shopping</li>
+                        <li>Home Delivery</li>
+                        <li>Curbside Pickup</li>
+                        <li>Pharmacy</li>
+                        <li>Fresh Bakery</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-3xl font-semibold mb-4">Location & Map</h2>
+            <div id="map" class="h-96 bg-white rounded-lg shadow-md"></div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="Supermarket.html">Products</a></a></li>
+                    <li><a href="#">Delivery Areas</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Returns & Refunds</a></li>
+                    <li><a href="#">Order Tracking</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>My Account</h4>
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Order History</a></li>
+                    <li><a href="#">Saved Lists</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Sustainability</a></li>
+                    <li><a href="#">Local Producers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section contact-info">
+                <h4>Contact Information</h4>
+                <p>📞 Customer Support: 1-473-WALKER</p>
+                <p>✉️ Email: support@walkersupermarket.com</p>
+                <p>🏢 Address: La Digue Road, St.Andrews, Grenada</p>
+            </div>
+            
+            <div class="footer-section newsletter">
+                <h4>Stay Connected</h4>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-media">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy;2024 Walker Community Supermarket. All rights reserved.</p>
+            <div class="payment-methods">
+                <span>We Accept:</span>
+                <img src="../Img/visa-icon.png" alt="Visa">
+                <img src="../Img/mastercard-icon-removebg-preview.png" alt="Mastercard">
+                <img src="../Img/paypal-icon.png" alt="PayPal">
+            </div>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Settings</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+</body>
+</html>
